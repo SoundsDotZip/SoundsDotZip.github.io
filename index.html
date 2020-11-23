@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Kerület terület</title>
+</head>
+<body style="background-image: url(https://cdn.hipwallpaper.com/i/16/77/zwkJeA.jpg);">
+    <h1 style="text-align: center; color: darkblue; font-family: Cambria;">Téglalap területe, kerülete</h1>
+    <div style="text-align: center;">
+        <input type="text" id="szam1" class="t1">
+        <input type="text" id="szam2" class="t1">
+    </div>
+    <div style="text-align: center;">
+        <button onclick="osszeadas()" class="btn btn-primary">Összeadás</button>
+    </div>
+    <div style="text-align: center;">
+        <span id="kkimenet" class="t1"></span>
+    </div>
+    <div style="text-align: center;">
+        <span id="tkimenet" class="t1"></span>
+    </div>
+    <script>
+        function osszeadas()
+        {
+            var szam1 = document.getElementById("szam1").value;
+            var szam2 = document.getElementById("szam2").value;
+            var kosszeg = parseInt(szam1) + parseInt(szam1) + parseInt(szam2) + parseInt(szam2);
+            var tosszeg = parseInt(szam1) * parseInt(szam2);            
+            document.getElementById("kkimenet").innerHTML = "Terület:" + tosszeg;
+            document.getElementById("tkimenet").innerHTML = "Kerület:" + kosszeg;
+        }
+    </script>
+</body>
+</html>
